@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>suk.bear</title>
+  <style>
+    a,
+    body,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    html,
+    p,
+    section {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .wrap {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #2b2521;
+      position: relative;
+      animation: 3s linear both cut;
+    }
+
+    .author {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: #fff;
+      z-index: 6;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .author .name {
+      padding: 10px 0;
+    }
+
+    .author .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    .author .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .author .ssss {
+      width: 120%;
+      font-size: 12px;
+    }
+
+    .wgsection-m-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+
+    .wgsection--4 {
+      background: url(./img/bg.png) no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    .wgsection-m-light {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -26% 0 0 -26%;
+      z-index: 4;
+      background: url(./img/halo.png) no-repeat 0 0;
+      background-size: 100% 100%;
+      width: 52.08333%;
+      will-change: transform, opacity;
+      transform: scale3d(0, 0, 0);
+      animation: 10s linear 3.3s infinite flow;
+    }
+
+    .wgsection-m-light:after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    .wgsection-mask {
+      -webkit-mask-image: url(./img/logo.svg);
+      mask-image: url(./img/logo.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 21% auto;
+      mask-size: 21% auto;
+      -webkit-mask-position: 50% 51%;
+      mask-position: 50% 51%;
+      z-index: 120;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      z-index: 5;
+      color: #999;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer a {
+      color: #999;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    @keyframes cut {
+      0% {
+        -webkit-mask-size: 21%;
+      }
+
+      16.6666% {
+        -webkit-mask-size: 96.158%
+      }
+
+      33.3332% {
+        -webkit-mask-size: 463.111%;
+      }
+
+      49.99979999999999% {
+        -webkit-mask-size: 905.222%;
+      }
+
+      66.664% {
+        -webkit-mask-size: 1347.33%;
+      }
+
+      82.664% {
+        -webkit-mask-size: 1647.33%;
+      }
+
+      100% {
+        -webkit-mask-size: 8285.56%;
+      }
+    }
+
+    @keyframes flow {
+      0% {
+        transform: scale3d(0, 0, 0);
+      }
+
+      12.5% {
+        transform: scale3d(0.266667, 0.266667, 0.0833333);
+      }
+
+      25% {
+        transform: scale3d(0.8, 0.8, 0.25);
+      }
+
+      37.5% {
+        transform: scale3d(1.33333, 1.33333, 0.416667);
+      }
+
+      50% {
+        transform: scale3d(1.86667, 1.86667, 0.583333);
+      }
+
+      62.5% {
+        transform: scale3d(2.4, 2.4, 0.75);
+      }
+
+      75% {
+        transform: scale3d(2.93333, 2.93333, 0.916667);
+      }
+
+      100% {
+        transform: scale3d(3.2, 3.2, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap wgsection-mask">
+    <div class="wgsection-m-img wgsection--4"></div>
+    <div class="wgsection-m-light skrollable skrollable-between"></div>
+    <div class="author">
+      <div class="avatar">
+        <img src="./img/avatar.jpg" alt="avatar">
+      </div>
+      <div class="name">suk.bear</div>
+      <div class="ssss">职业：JS developer | Base：南昌 | 王者段位：王者1星</div>
+    </div>
+    <div class="footer">
+      <div class="github">
+        <a href="https://github.com/singleManFan">github</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
